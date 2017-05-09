@@ -1,6 +1,4 @@
 个人vim配置文件，适合开发各种语言。
 安装简单：
-
-升级vim7.4，安装 the-silver-searcher
-
-下载文件，直接使用
+直接将Vim文件件重名名：
+MV vim .vim 就可以了。
