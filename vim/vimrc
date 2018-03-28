@@ -171,6 +171,10 @@ let NERDTreeWinPos = "left"
 let NERDSpaceDelims=1
 " nmap <D-/> :NERDComToggleComment<cr>
 let NERDCompactSexyComs=1
+" auto open tree
+" autocmd vimenter * NERDTree
+map <space> :NERDTreeToggle<CR>                                                                                                              
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&b:NERDTreeType == "primary") | q | endif
 
 " ZenCoding
 "let g:user_emmet_expandabbr_key='<C-j>'
