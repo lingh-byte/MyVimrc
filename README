@@ -1,5 +1,6 @@
 个人vim配置文件，适合开发各种语言。
 安装简单：
-直接将Vim拷到.vim下：
-cd vim
-cp -r ./* ~/.vim/ 就可以了。
+
+rm -rf ~/.vimrc ~/.vim
+cp -r ./vim ~/.vim //将vim整个文件夹拷贝到本地的.vim
+ln -s ~/.vim/vimrc ~/.vimrc //将vimrc 拷贝到本地的.vimrc,没有的话先建一个.vimrc
