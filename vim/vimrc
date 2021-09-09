@@ -84,6 +84,10 @@ let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
 
+" godef
+let g:godef_split=3 """左右打开新窗口的时候
+let g:godef_same_file_in_same_window=1 """函数在同一个文件中时不需要打开新窗口
+
 "-----------------
 " Plugin settings
 "-----------------
