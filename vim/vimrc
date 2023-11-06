@@ -54,7 +54,8 @@ set matchtime=2                                                   " show matchin
 "set relativenumber
 
 set nobackup       " no backup files
-set noswapfile     " no swap files
+" 打开swap file，以便于为保存恢复
+" set noswapfile     " no swap files
 set nowritebackup  " only in case you don't want a backup file while editing
 set noundofile     " no undo files
 " Default Indentation
@@ -68,6 +69,15 @@ set smarttab
 set expandtab       " expand tab to space
 set t_ti= t_te=
 set hlsearch
+
+" Difforig 命令，很方便地将正在编辑的文件和磁盘上的文件作对比
+" Convenient command to see the difference between the current buffer and the
+" file it was loaded from, thus the changes you made.
+" Only define it when not defined already.
+if !exists(":DiffOrig")
+  command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
+	\ | wincmd p | diffthis
+endif
 
 autocmd FileType php setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
 autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
