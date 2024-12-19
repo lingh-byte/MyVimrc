@@ -11,7 +11,10 @@ Bundle 'gmarik/vundle'
 "------------------
 " Code Completions
 "------------------
-Bundle 'Shougo/neocomplcache'
+"Bundle 'Shougo/neocomplcache'
+Bundle 'Shougo/deoplete.nvim'
+Bundle 'roxma/vim-hug-neovim-rpc'
+Bundle 'roxma/nvim-yarp'
 Bundle 'mattn/emmet-vim'
 Bundle 'Raimondi/delimitMate'
 Bundle 'ervandew/supertab'
@@ -85,6 +88,7 @@ Bundle 'tpope/vim-markdown'
 
 "------- Go ----------
 Bundle 'fatih/vim-go'
+Bundle  'dgryski/vim-godef'
 
 "------- FPs ------
 Bundle 'kien/rainbow_parentheses.vim'

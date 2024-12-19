@@ -197,29 +197,29 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&b:NERDTreeT
 "let g:Powerline_symbols = 'fancy'
 
 " NeoComplCache
-let g:neocomplcache_enable_at_startup=1
-let g:neocomplcache_disableautocomplete=1
-let g:neocomplcache_enable_underbar_completion = 1
-let g:neocomplcache_enable_camel_case_completion = 1
-let g:neocomplcache_enable_smart_case=1
-let g:neocomplcache_min_syntax_length = 1
-let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
-let g:neocomplcache_max_list=10
-" Define keyword.
-if !exists('g:neocomplcache_keyword_patterns')
-	let g:neocomplcache_keyword_patterns = {}
-endif
-	let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
-let g:neocomplcache_auto_completion_start_length=1
-" ignore letter case
-let g:neocomplcache_enable_ignore_case=1
+"let g:neocomplcache_enable_at_startup=1
+"let g:neocomplcache_disableautocomplete=1
+"let g:neocomplcache_enable_underbar_completion = 1
+"let g:neocomplcache_enable_camel_case_completion = 1
+"let g:neocomplcache_enable_smart_case=1
+"let g:neocomplcache_min_syntax_length = 1
+"let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
+"let g:neocomplcache_max_list=10
+"" Define keyword.
+"if !exists('g:neocomplcache_keyword_patterns')
+"	let g:neocomplcache_keyword_patterns = {}
+"endif
+"	let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
+"let g:neocomplcache_auto_completion_start_length=1
+"" ignore letter case
+"let g:neocomplcache_enable_ignore_case=1
 
 set completeopt-=preview
 
-imap <C-k> <Plug>(neocomplcache_snippets_force_expand)
-smap <C-k> <Plug>(neocomplcache_snippets_force_expand)
-imap <C-l> <Plug>(neocomplcache_snippets_force_jump)
-smap <C-l> <Plug>(neocomplcache_snippets_force_jump)
+"imap <C-k> <Plug>(neocomplcache_snippets_force_expand)
+"smap <C-k> <Plug>(neocomplcache_snippets_force_expand)
+"imap <C-l> <Plug>(neocomplcache_snippets_force_jump)
+"smap <C-l> <Plug>(neocomplcache_snippets_force_jump)
 
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
@@ -228,10 +228,10 @@ autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType c setlocal omnifunc=ccomplete#Complete
 autocmd FileType php setlocal omnifunc=phpcomplete#Complete
-if !exists('g:neocomplcache_omni_patterns')
-  let g:neocomplcache_omni_patterns = {}
-endif
-let g:neocomplcache_omni_patterns.erlang = '[a-zA-Z]\|:'
+"if !exists('g:neocomplcache_omni_patterns')
+"  let g:neocomplcache_omni_patterns = {}
+"endif
+"let g:neocomplcache_omni_patterns.erlang = '[a-zA-Z]\|:'
 
 " SuperTab
 let g:SuperTabDefultCompletionType='context'
@@ -372,3 +372,9 @@ function TitleDet()
     call AddTitle()
 endfunction
 
+
+" code complete
+" deoplete 会使用python3，需要确认vim已经安装了pyton3
+" 通过执行:echo exepath('python3'),确认清楚vim使用的python3的路径
+" 需要对这个python3安装pynvim
+let g:deoplete#enable_at_startup = 1
