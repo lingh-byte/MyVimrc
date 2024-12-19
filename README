@@ -4,3 +4,10 @@
 rm -rf ~/.vimrc ~/.vim
 cp -r ./vim ~/.vim //将vim整个文件夹拷贝到本地的.vim
 ln -s ~/.vim/vimrc ~/.vimrc //将vimrc 拷贝到本地的.vimrc,没有的话先建一个.vimrc
+
+## 注意：
+1. deoplete 需要vim支持python3
+  deoplete 会使用python3，需要确认vim已经安装了pyton3
+  通过执行:echo exepath('python3'),确认清楚vim使用的python3的路径
+  需要对这个python3安装pynvim, 执行下面的命令：
+  pip3 install --user pynvim
